@@ -1,7 +1,29 @@
-import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import React from 'react';
 
-import Main from '~/pages/Main';
+import { createStackNavigator } from '@react-navigation/stack';
+import Login from './pages/Login';
+import Home from './pages/Tela Inicial';
 
-const Routes = createAppContainer(createSwitchNavigator({ Main }));
 
-export default Routes;
+const Stack = createStackNavigator();
+
+export default function Routes() {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false
+     }}
+     >
+      <Stack.Screen 
+        name="Login" 
+        component={Login} 
+        options={{ title: null }}
+      />
+      <Stack.Screen 
+        name="Home" 
+        component={Home} 
+        options={{ title: null }}
+      />
+    </Stack.Navigator>
+  );
+}
