@@ -17,13 +17,11 @@ import {
 
  } from './styles';
 
- import Icon from 'react-native-vector-icons/MaterialIcons'
- Icon.loadFont();
 
 import logo from '../../assets/images/Logo.jpg';
 import arrow from '../../assets/images/arrow.png';
 
-export default function Login(){
+export default function Login({ navigation }){
     const [offset] = useState(new Animated.ValueXY({ x: 0, y: 100 }));
     const [opacity] = useState(new Animated.Value(0));
     const [email, setEmail] = useState('');
@@ -45,14 +43,17 @@ export default function Login(){
       }, []);
 
       const verificaDados = () => {
-        if (email.length == 0) {
-          alert('E-mail não inserido');
-        }
-        if (password.length == 0) {
-          alert('senha não inserida');
-        }
+        // if (email.length == 0) {
+        //   alert('E-mail não inserido');
+        // }
+        // if (password.length == 0) {
+        //   alert('senha não inserida');
+        // }
+        // if(password != '' && email != ''){
+           navigation.navigate('Home');
+        // }
       };
-    
+
     return(
         <Container>
                 <Animated.View
@@ -78,7 +79,7 @@ export default function Login(){
                           />
                       </InputView>
                       <ViewButton>
-                        <BtnCadastrar>
+                        <BtnCadastrar onPress={() => navigation.navigate('Cadastrar')}>
                           <TxtBtnCadastrar>
                             Cadastrar
                           </TxtBtnCadastrar>
