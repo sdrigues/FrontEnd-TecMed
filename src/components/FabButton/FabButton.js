@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Image } from 'react-native';
 import ActionButton from 'react-native-action-button';
-import Arrow from '../assets/images/arrow.png';
+import Arrow from '../../assets/images/arrow.png';
 
 export default class FabButton extends Component {
 

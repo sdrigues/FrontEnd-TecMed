@@ -2,7 +2,7 @@ import React from 'react';
 
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from './pages/Login';
-import Home from './pages/Tela Inicial';
+import Home from './routes/Teste';
 import Cadastrar from './pages/Cadastrar';
 
 

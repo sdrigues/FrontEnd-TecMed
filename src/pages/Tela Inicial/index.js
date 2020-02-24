@@ -22,7 +22,7 @@ import {
 
 
 } from './styles';
-import FabButton from '../../components/FabButton';
+import FabButton from '../../components/FabButton/FabButton';
 
 import Logo from '../../assets/images/Logo.jpg';
 
