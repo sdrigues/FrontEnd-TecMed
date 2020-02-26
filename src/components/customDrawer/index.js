@@ -47,7 +47,7 @@ export default function DrawerContent({props, navigation}) {
           />
           <DrawerItem
             label="Minhas Guias"
-            onPress={() => {}}
+            onPress={() => navigation.navigate('Guias') }
             labelStyle={{ color: '#5EE0B6', fontSize: 17, paddingLeft: 30} }
           />
             <DrawerItem
@@ -81,7 +81,7 @@ export default function DrawerContent({props, navigation}) {
         <ViewBntSingOut>
           <DrawerItem {...props}
             label="Sign Out"
-            onPress={() => navigation.navigate('SignOut')}
+            onPress={() => navigation.pop()}
             labelStyle={{ color: '#5EE0B6', fontSize: 17, paddingLeft: 85} }
           />
         </ViewBntSingOut>

@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { createStackNavigator } from '@react-navigation/stack';
-import Login from './pages/Login';
-import Home from './routes/Teste';
-import Cadastrar from './pages/Cadastrar';
+import Login from '../pages/Login';
+import Home from './Drawer_Menu';
+import Cadastrar from '../pages/Cadastrar';
 
 
 const Stack = createStackNavigator();

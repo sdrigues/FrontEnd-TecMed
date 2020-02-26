@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import Routes from './routes';
+import Routes from './routes/routes';
 import { NavigationContainer } from '@react-navigation/native';
 import { Provider as PaperProvider } from 'react-native-paper';
 
