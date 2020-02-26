@@ -1,5 +1,5 @@
 import React, { useEffect, useState }from 'react';
-import {Animated} from 'react-native';
+import {Animated, StatusBar} from 'react-native';
 import { 
     Container,
     TitleLogo, 
@@ -56,6 +56,7 @@ export default function Login({ navigation }){
 
     return(
         <Container>
+          <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
                 <Animated.View
                     style={[{
                         opacity: opacity,

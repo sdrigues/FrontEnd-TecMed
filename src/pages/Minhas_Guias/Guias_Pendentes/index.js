@@ -3,21 +3,42 @@ import { StatusBar } from 'react-native';
 
 import {
   Container, 
-  Logo,
   Descricao,
   FlatList,
+
+  //View Title
   TextTitle,
   ViewItem,
   ViewConteudo,
-  TextCnpj,
+
+  //View 1
+  TextPrestador,
+  TextNomePrestador,
+  TextTipoGuia,
+  TextGuia,
+ 
+  //View 2
+  TextTipoEspecialidade,
+  TextEspecialidade,
+  TextStatus,
+  TextTipoStatus,
+
+  //View 3
+  TextData,
   TextDtCad,
-  TextPessoa,
+  TextTipoDtConsultaEfetuada,
+  TextDtConsultaEfetuada,
+
   ViewFlatList,
   Button,
   ViewTop,
   TextButton,
-  TextInput
+  TextInput,
+
+  ViewTitle,
+  TextNGuia
 } from './styles';
+
 import api from '../../../services/api';
 
 export default class App extends Component {
@@ -36,15 +57,32 @@ export default class App extends Component {
   }
   renderItem = ({ item }) => (
     <ViewItem>
-        
-      <TextTitle>{item.title}</TextTitle>
+        <ViewTitle>
+          <TextTitle>Guia: </TextTitle>
+          <TextNGuia>123456{}</TextNGuia>
+        </ViewTitle>
+      
       <ViewConteudo>
-        <TextCnpj>CNPJ/CPF: 12.345.678/0001-00</TextCnpj>
-        <TextDtCad> Data Cadastro:</TextDtCad>
+        <TextPrestador>Prestador:</TextPrestador>
+          <TextNomePrestador>José da Silva Cunha{}</TextNomePrestador>
+          <TextGuia>Tipo de guia:</TextGuia>
+          <TextTipoGuia>Consulta{}</TextTipoGuia>
       </ViewConteudo>
+
       <ViewConteudo>
-        <TextPessoa>Pessoa: Jurídico</TextPessoa> 
-        <TextDtCad>{item.createdAt}</TextDtCad> 
+        <TextEspecialidade>Especialidade:</TextEspecialidade> 
+        <TextTipoEspecialidade>Oftalmologia{}</TextTipoEspecialidade>
+        <TextStatus>Status:</TextStatus>
+        <TextTipoStatus>Efetuada{}</TextTipoStatus>
+      </ViewConteudo>
+
+
+      <ViewConteudo>
+          <TextDtCad>Data Consulta:</TextDtCad>
+          <TextData>20-10-2020</TextData>
+
+        <TextDtConsultaEfetuada>Data Realizada:</TextDtConsultaEfetuada> 
+        <TextTipoDtConsultaEfetuada>20-10-2020{}</TextTipoDtConsultaEfetuada>
       </ViewConteudo>
     </ViewItem>
   );
@@ -53,9 +91,9 @@ export default class App extends Component {
     return (
       <Container>
           <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
-          <Descricao>Listagem de Clientes</Descricao>
+          <Descricao>Guias Pendentes</Descricao>
         <ViewTop>
-            <TextInput placeholder="Buscar Clientes" />
+            <TextInput placeholder="Buscar Guias" />
             <Button>
                 <TextButton>
                     +
