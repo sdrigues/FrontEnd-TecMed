@@ -8,28 +8,28 @@ export const ViewPerfil = styled.View`
 
 `;
 export const ImagemUsuaro = styled.Image`
-    width: 50;
-    height: 50;
-    margin-left: 30;
-    margin-top: 30;
+    width: 50px;
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 30px;
 `;
 export const NomeUsuario = styled.Text`
-    font-size: 23;
-    margin-top: 40;
-    margin-left: 10;
+    font-size: 23px;
+    margin-top: 40px;
+    margin-left: 10px;
 `;
 export const BtnPerfil = styled.TouchableOpacity`
-    margin-left: 40;
-    margin-top: 20;
+    margin-left: 40px;
+    margin-top: 20px;
 `;
 export const TxtBtnPerfil = styled.Text`
-    font-size: 17;
+    font-size: 17px;
 `;
 
 export const ConteudoMenu = styled.View`
-    margin-top: 20;
+    margin-top: 20px;
 `;
 export const ViewBntSingOut = styled.View`
-    margin-top: 130;
+    margin-top: 130px;
    
 `;

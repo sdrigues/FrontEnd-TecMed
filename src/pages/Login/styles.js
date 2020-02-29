@@ -11,11 +11,11 @@ export const TitleLogo = styled.Text`
     font-weight: normal;
     font-size: 45px;
     line-height: 56px;
-    font-size: 40;
+    font-size: 40px;
     color: #5EE0B6;
-    margin-top: 60;
-    margin-left: 75;
-    margin-bottom: 10;
+    margin-top: 60px;
+    margin-left: 75px;
+    margin-bottom: 10px;
 `;
 
 export const LogoImg = styled.Image`
@@ -28,72 +28,69 @@ export const BoxInput = styled.TextInput`
     height: 75%;
     width: 89%;
     background-color: #FFF;
-    padding-left: 15;
-    border-bottom-width: 1;
+    padding-left: 15px;
+    border-bottom-width: 1px;
     border-color: rgba(0,0,0,0.5);
-    font-size: 14;
+    font-size: 14px;
 
 `;
 export const InputView = styled.View`
     flex-direction: row;
-    margin-left: 35;
-    margin-top: 20
+    margin-left: 35px;
+    margin-top: 20px;
 `;
 
 export const ViewButton = styled.View`
     flex-direction: row;
-    margin-top: 20;
-    margin-left: 50;
+    margin-top: 20px;
+    margin-left: 50px;
 `;
 export const BtnCadastrar = styled.TouchableOpacity`
-    width: 110;
-    height: 35;
+    width: 110px;
+    height: 35px;
     border-color: rgba(0,0,0,0.5);
-    border-radius: 3;
+    border-radius: 3px;
     align-items: center;
     align-content: center;
 `;
 export const TxtBtnCadastrar = styled.Text`
     color: rgba(0,0,0,0.5);
-    margin-top: 20;
-    font-size: 19;
+    margin-top: 20px;
+    font-size: 19px;
 `;
 
 export const BtnEntrar = styled.TouchableOpacity`
-    width: 70;
-    height: 70;
-    border-width: 1;
+    width: 70px;
+    height: 70px;
+    border-width: 1px;
     border-color: #5EE0B6;
-    margin-left: 50;
-    border-radius: 35;
+    margin-left: 50px;
+    border-radius: 35px;
     align-items: center;
     align-content: center;
     background-color: #5EE0B6;
 `;
 export const ImgEntrar = styled.Image`
-    color: #FFF;
-    width: 20;
-    height: 20;
-    margin-top: 23;
-    margin-left: 2;
+    width: 20px;
+    height: 20px;
+    margin-top: 23px;
+    margin-left: 2px;
     align-items: center;
     align-content: center;
 `;
 export const ViewBtnEsqueceuSenha = styled.View`
     flex-direction: row;
-    margin-left: 60;
-    margin-top: 50;
+    margin-left: 26%;
+    margin-top: 50px;
 `;
 export const BtnEsqueceuSenha = styled.TouchableOpacity`
-width: 70%;
-height: 35;
-border-color: #FFF;
-border-radius: 3;
-align-items: center;
-align-content: center;
+    width: 100%;
+    height: 35px;
+    border-color: #FFF;
+    border-radius: 3px;
 `;
 export const TxtBtnEsqueceuSenha = styled.Text`
     color: #5EE0B6;
-    margin-top: 15;
-    font-size: 18;
+    margin-top: 15px;
+    font-size: 18px;
 `;

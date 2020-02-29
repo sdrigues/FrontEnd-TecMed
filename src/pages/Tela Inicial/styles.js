@@ -8,9 +8,9 @@ export const ViewTop = styled.View`
     flex-direction: row;
 `;
 export const Title  = styled.Text`
-    font-size: 25;
-    margin-top: 45;
-    margin-left: 50;
+    font-size: 25px;
+    margin-top: 45px;
+    margin-left: 50px;
     color: rgba(0,0,0,0.5);
     font-family: Rufina;
     font-style: normal;
@@ -18,72 +18,67 @@ export const Title  = styled.Text`
 `;
 
 export const LogoImg = styled.Image`
-    width: 60;
-    height: 90;
-    margin-left: 90;
+    width: 60px;
+    height: 90px;
+    margin-left: 90px;
 `;
 export const ViewCard = styled.View`
-    margin-left: 30;
-    margin-top: 10;
+    margin-left: 30px;
+    margin-top: 10px;
     background-color: rgba(202, 202, 202, 0.2);
     width: 80%;
     height: 19%;
-    border-radius: 10;
+    border-radius: 10px;
     border-color: #CACACA; 
-    border-width: 2;
-    border-top-width: 3;
+    border-width: 2px;
+    border-top-width: 3px;
 `;
 
 export const ViewTitle = styled.View`
-    margin-top: 5;
-    padding-left: 10;
+    margin-top: 5px;
+    padding-left: 10px;
 `;
 export const TitleCard = styled.Text`
-    font-size: 25;
+    font-size: 25px;
     color: rgba(0, 0, 0, 0.5);
-
-
 `;
 export const ViewSubTitle = styled.View`
-    margin-top: 5;
-    margin-left: 40;
+    margin-top: 5px;
+    margin-left: 40px;
 `;
 
 export const SubTitleCard = styled.Text`
-    font-size: 13;
+    font-size: 13px;
     color: rgba(0, 0, 0, 0.5);
-
-
 `;
 export const ViewConteudo = styled.View`
     flex-direction: row;
-    margin-top: 25;
-    margin-left: 30;
+    margin-top: 25px;
+    margin-left: 30px;
 `;
 
 export const TotalText = styled.Text`
-    font-size: 25;
-    margin-left: 30;
+    font-size: 25px;
+    margin-left: 30px;
     color: rgba(0, 0, 0, 0.5);
 `;
 
-
 export const ValCard = styled.Text`
-    margin-top: 5;
-    font-size: 20;
+    margin-top: 5px;
+    font-size: 20px;
     color: rgba(0, 0, 0, 0.5);
 `;
 
 export const ValConsultas = styled.Text`
-    margin-top: 5;
-    margin-left:5;
-    font-size: 20;
+    margin-top: 5px;
+    margin-left:5px;
+    font-size: 20px;
     color: rgba(0, 0, 0, 0.5);
 `;
 
 export const ConsText = styled.Text`
-    font-size: 25;
-    margin-left: 120;
+    font-size: 25px;
+    margin-left: 120px;
     color: rgba(0, 0, 0, 0.5);
 `;
 
