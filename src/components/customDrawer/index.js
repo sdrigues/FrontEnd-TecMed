@@ -1,20 +1,8 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
 import {
   DrawerItem,
   DrawerContentScrollView,
 } from '@react-navigation/drawer';
-import {
-  Avatar,
-  Title,
-  Caption,
-  Paragraph,
-  Drawer,
-  Text,
-  TouchableRipple,
-  Switch,
-} from 'react-native-paper';
-
 import User from '../../assets/images/User.png';
 import {
     ViewPerfil,

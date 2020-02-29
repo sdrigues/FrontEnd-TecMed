@@ -1,5 +1,4 @@
 import React from 'react';
-import { Animated } from 'react-native';
 
 import {
     Container,
@@ -16,13 +15,15 @@ import {
     ValConsultas,
     ConsText,
     ViewButtonMenu,
+    Image,
 
 } from './styles';
-import FabButton from '../../components/FabButton/FabButton';
+import ActionButton from 'react-native-action-button';
+import Arrow from '../../assets/images/arrow.png';
 
 import Logo from '../../assets/images/Logo.jpg';
 
-export default function TelaInicial(){
+export default function TelaInicial({navigation}){
     return(
        <Container>
            <ViewTop>
@@ -46,7 +47,19 @@ export default function TelaInicial(){
                  
             </ViewCard>
             <ViewButtonMenu>
-                <FabButton />
+                <ActionButton buttonColor="#5EE0B6" hideShadow={true} >
+                    <ActionButton.Item buttonColor='#5EE0B6' title="Minhas Guias" onPress={() => navigation.navigate('Guias') }>
+                        <Image source={Arrow}/>
+                    </ActionButton.Item >
+
+                    <ActionButton.Item buttonColor='#5EE0B6'  title="Financeiro" onPress={() => navigation.navigate('Financeiro') }>
+                        <Image source={Arrow}/>
+                    </ActionButton.Item>
+
+                    <ActionButton.Item buttonColor='#5EE0B6' title="Rede Credenciada" onPress={() => navigation.navigate('RedeMedica') }>
+                        <Image source={Arrow} />
+                    </ActionButton.Item>
+        </ActionButton>
             </ViewButtonMenu>
        </Container>
     );

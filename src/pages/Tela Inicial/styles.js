@@ -84,3 +84,7 @@ export const ConsText = styled.Text`
 export const ViewButtonMenu = styled.View`
     flex: 1;   
 `;
+export const Image = styled.Image`
+    width: 30px;
+    height: 30px;
+`;
