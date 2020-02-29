@@ -9,28 +9,24 @@ export const ViewTop = styled.View`
 `;
 export const Title  = styled.Text`
     font-size: 25px;
-    margin-top: 45px;
-    margin-left: 50px;
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-bottom: 3%;
     color: rgba(0,0,0,0.5);
     font-family: Rufina;
     font-style: normal;
     font-weight: normal;
 `;
 
-export const LogoImg = styled.Image`
-    width: 60px;
-    height: 90px;
-    margin-left: 90px;
-`;
 export const ViewCard = styled.View`
-    margin-left: 30px;
-    margin-top: 10px;
+    margin-left: 11%;
+    margin-top: 4%;
     background-color: rgba(202, 202, 202, 0.2);
     width: 80%;
-    height: 19%;
+    height: 18%;
     border-radius: 10px;
     border-color: #CACACA; 
-    border-width: 2px;
+    border-width: 1px;
     border-top-width: 3px;
 `;
 
@@ -39,7 +35,7 @@ export const ViewTitle = styled.View`
     padding-left: 10px;
 `;
 export const TitleCard = styled.Text`
-    font-size: 25px;
+    font-size: 23px;
     color: rgba(0, 0, 0, 0.5);
 `;
 export const ViewSubTitle = styled.View`
@@ -53,7 +49,7 @@ export const SubTitleCard = styled.Text`
 `;
 export const ViewConteudo = styled.View`
     flex-direction: row;
-    margin-top: 25px;
+    margin-top: 23px;
     margin-left: 30px;
 `;
 
@@ -84,4 +80,16 @@ export const ConsText = styled.Text`
 
 export const ViewButtonMenu = styled.View`
     flex: 1;   
+`;
+
+export const ViewGrafico =  styled.View`
+    margin-top: 5%;
+    margin-left: 10%;
+`;
+
+export const TitleGrafico = styled.Text`
+    margin-left: 35%;
+    font-size: 15px;
+    margin-bottom: 1%;
+    color: rgba(0,0,0,0.5);
 `;

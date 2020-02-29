@@ -4,9 +4,8 @@ export const Container = styled.View`
   flex: 1;
   background-color: #FFF;
 `;
-export const ViewTop = styled.View`
-    /* flex-direction: row; */
-`;
+export const ViewTop = styled.View``;
+
 export const Title  = styled.Text`
     font-size: 25px;
     margin-top: 3%;
@@ -39,7 +38,7 @@ export const ViewCard = styled.View`
     height: 19%;
     border-radius: 10px;
     border-color: #CACACA; 
-    border-width: 2px;
+    border-width: 1px;
     border-top-width: 3px;
 `;
 
