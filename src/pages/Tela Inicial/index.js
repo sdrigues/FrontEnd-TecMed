@@ -6,20 +6,16 @@ import {
     ViewTop,
     Title,
     LogoImg,
+    SubTitleTop,
     ViewCard,
     TitleCard,
     SubTitleCard,
-    TotalText,
-    ValCard,
     ViewConteudo,
     ViewTitle,
     ViewSubTitle,
     ValConsultas,
     ConsText,
     ViewButtonMenu,
-    BtnMenu,
-    BtnSubMenu,
-
 
 } from './styles';
 import FabButton from '../../components/FabButton/FabButton';
@@ -30,37 +26,24 @@ export default function TelaInicial(){
     return(
        <Container>
            <ViewTop>
-               <Title>DashBoard</Title>
-               <LogoImg source={Logo}/>
-           </ViewTop>
+           <LogoImg source={Logo}/>
+           <Title>Bem Vindo Samuel{}</Title>
+            <SubTitleTop>Resumo Proxmos 30 Dias</SubTitleTop>
+            </ViewTop>
 
            <ViewCard>
                 <ViewTitle>
-                    <TitleCard>Consultas</TitleCard>
+                    <TitleCard>Consultas Pendetes</TitleCard>
                 </ViewTitle>
                 <ViewSubTitle>
-                    <SubTitleCard>Ultimos 30 Dias</SubTitleCard>
+                    <SubTitleCard>próximos 30 Dias</SubTitleCard>
                 </ViewSubTitle>
                 
                 <ViewConteudo>
                     <ConsText>Total: </ConsText>
-                    <ValConsultas>999</ValConsultas>  
+                    <ValConsultas>1</ValConsultas>  
                 </ViewConteudo>
                  
-            </ViewCard>
-            <ViewCard>
-                <ViewTitle>
-                    <TitleCard>Coparticipação</TitleCard>
-                </ViewTitle>
-                
-                <ViewSubTitle>
-                    <SubTitleCard>Ultimos 30 Dias</SubTitleCard>
-                </ViewSubTitle>
-                
-                <ViewConteudo>
-                    <TotalText>Total: R$ </TotalText>
-                    <ValCard>123456,90</ValCard>  
-                </ViewConteudo>
             </ViewCard>
             <ViewButtonMenu>
                 <FabButton />
