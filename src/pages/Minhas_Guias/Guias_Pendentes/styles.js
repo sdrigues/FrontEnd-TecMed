@@ -30,10 +30,10 @@ export const Button = styled.TouchableOpacity`
 `;
 
 export const TextInput = styled.TextInput`
-    width: 80%;
+    width: 90%;
     background-color: #FFF;
     elevation: 4px;
-    padding-left: 5px;
+    padding-left: 15px;
     border-radius: 5px;
 `;
 

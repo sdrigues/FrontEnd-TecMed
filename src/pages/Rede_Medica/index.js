@@ -39,7 +39,7 @@ import {
   TextNGuia
 } from './styles';
 
-import api from '../../../services/api';
+import api from '../../services/api';
 
 export default class App extends Component {
   state = {
@@ -91,9 +91,9 @@ export default class App extends Component {
     return (
       <Container>
           <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
-          <Descricao>Guias Efetuadas</Descricao>
+          <Descricao>Rede Credenciada</Descricao>
         <ViewTop>
-            <TextInput placeholder="Buscar Guias" />
+            <TextInput placeholder="Digite a especialidade ou o Médico" />
         </ViewTop>
         
        

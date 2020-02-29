@@ -5,6 +5,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import Home from '../pages/Tela Inicial';
 import SignOut from '../pages/Login';
 import Financeiro from '../pages/Financeiro';
+import RedeMedica from '../pages/Rede_Medica';
 
 //custom drawer
 import DrawerContent from '../components/customDrawer';
@@ -21,6 +22,7 @@ export default function RootNavigator() {
       <Drawer.Screen name="Home" component={Home} />
       <Drawer.Screen name="Guias" component={Guias} />
       <Drawer.Screen name="Financeiro" component={Financeiro} />
+      <Drawer.Screen name="RedeMedica" component={RedeMedica} />
       <Drawer.Screen name="SignOut" component={SignOut} />
     </Drawer.Navigator>
   );

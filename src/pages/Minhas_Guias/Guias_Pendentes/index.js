@@ -94,11 +94,6 @@ export default class App extends Component {
           <Descricao>Guias Pendentes</Descricao>
         <ViewTop>
             <TextInput placeholder="Buscar Guias" />
-            <Button>
-                <TextButton>
-                    +
-                </TextButton>
-            </Button>
         </ViewTop>
         
        

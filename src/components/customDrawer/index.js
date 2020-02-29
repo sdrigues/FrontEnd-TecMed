@@ -57,7 +57,7 @@ export default function DrawerContent({props, navigation}) {
             />
               <DrawerItem
             label="Rede Médica"
-            onPress={() => {}}
+            onPress={() => navigation.navigate('RedeMedica') }
             labelStyle={{ color: '#5EE0B6', fontSize: 17, paddingLeft: 30} }
           />
               <DrawerItem
