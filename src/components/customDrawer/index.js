@@ -42,17 +42,17 @@ export default function DrawerContent({props, navigation}) {
         <ConteudoMenu>
             <DrawerItem {...props}
             label="Home"
-            onPress={() => {}}
+            onPress={() => navigation.navigate('Home')}
             labelStyle={{ color: '#5EE0B6', fontSize: 17, marginLeft: 30} }
           />
           <DrawerItem
             label="Minhas Guias"
-            onPress={() => navigation.navigate('Guias') }
+            onPress={() => navigation.navigate('Guias')}
             labelStyle={{ color: '#5EE0B6', fontSize: 17, paddingLeft: 30} }
           />
             <DrawerItem
                 label="Financeiro"
-                onPress={() => {}}
+                onPress={() => navigation.navigate('Financeiro') }
                 labelStyle={{ color: '#5EE0B6', fontSize: 17, paddingLeft: 30} }
             />
               <DrawerItem
