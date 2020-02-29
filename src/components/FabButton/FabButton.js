@@ -8,7 +8,6 @@ export default class FabButton extends Component {
   render() {
     return (
       <View style={ styles.container }>
-        {/* Rest of the app comes ABOVE the action button component !*/}
         <ActionButton buttonColor="#5EE0B6" hideShadow={true} >
           <ActionButton.Item buttonColor='#5EE0B6' title="New Task" onPress={() => {}}>
              <Image source={Arrow} style={styles.image} />

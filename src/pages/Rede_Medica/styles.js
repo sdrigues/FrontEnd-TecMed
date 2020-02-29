@@ -63,12 +63,13 @@ export const ViewTitle = styled.View`
 `;
 export const TextTitle = styled.Text`
     color: #000;
-    font-size: 22px;
+    font-size: 18px;
 `;
-export const TextNGuia = styled.Text`
-    color: #5EE0B6;
-    font-size: 20px;
+export const TextNomePrest = styled.Text`
+    color: rgba(0,0,0,0.8);
+    font-size: 16px;
     padding-top: 1%;
+    padding-left: 10;
 `;
 
 //FlatListItems View
@@ -80,78 +81,111 @@ export const ViewConteudo= styled.View`
 
 //FlatListItems View 1
 
-export const TextPrestador = styled.Text`
-    font-weight: bold;
-    font-size: 12px;
-`;
-
-export const TextNomePrestador =  styled.Text`
-    font-size: 11px;
-    padding-left: 4px;
-    padding-top: 0.4%;
-`;
-
-export const TextGuia = styled.Text`
-    font-weight: bold;
-    padding-left: 4px;
-    font-size: 12px;
-`;
-
-export const TextTipoGuia = styled.Text`
-    font-size: 11px;
-    padding-left: 4px;
-    padding-top: 0.5%;
-`;
-
-//FlatListItems View 2
-
-export const TextStatus = styled.Text`
-    font-weight: bold;
-    font-size: 12px;
-    padding-left: 4px;
-`;
-
-export const TextTipoStatus = styled.Text`
-    font-size: 11px;
-    padding-left: 4px;
-    padding-top: 0.5%;
-`;
 
 export const TextEspecialidade = styled.Text`
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
+    padding-left: 8px;
 `;
 
 export const TextTipoEspecialidade = styled.Text`
+    font-size: 13px;
+    padding-left: 4px;
+    padding-top: 0.5%;
+`;
+
+
+
+
+//FlatListItems View 2
+
+export const TextEnd = styled.Text`
+    font-weight: bold;
+    padding-left: 8px;
     font-size: 11px;
+`;
+
+export const TextEndPrestador = styled.Text`
+    font-size: 10px;
+    padding-left: 4px;
+    padding-top: 0.5%;
+`;
+
+export const TextNum = styled.Text`
+    font-weight: bold;
+    font-size: 11px;
+    padding-left: 10px;
+`;
+
+export const TextNumPrest = styled.Text`
+    font-size: 10px;
     padding-left: 4px;
     padding-top: 0.5%;
 `;
 
 //FlatListItems View 3 - datas
-export const TextDtCad = styled.Text`
+
+export const TextCep = styled.Text`
     font-weight: bold;
-    font-size: 12px;
-    margin-bottom: 3%;
-`;
-export const TextData = styled.Text`
+    padding-left: 8px;
     font-size: 11px;
+`;
+export const TextCepPrest = styled.Text`
+    font-size: 10px;
     padding-left: 4px;
     padding-top: 0.5%;
-    margin-bottom: 3%;
 `;
-export const TextDtConsultaEfetuada = styled.Text`
+
+export const TextBairro = styled.Text`
     font-weight: bold;
-    font-size: 12px;
     padding-left: 4px;
-    margin-bottom: 3%;
-`;
-export const TextTipoDtConsultaEfetuada = styled.Text`
     font-size: 11px;
-    padding-top: 0.5%;
+`;
+export const TextBairroPrest = styled.Text`
+    font-size: 10px;
     padding-left: 4px;
+    padding-top: 0.5%;
+`;
+
+export const TextCidade = styled.Text`
+    font-weight: bold;
+    padding-left: 4px;
+    font-size: 11px;
+`;
+export const TextCidadePrest = styled.Text`
+    font-size: 10px;
+    padding-left: 4px;
+    padding-top: 0.5%;
+`;
+
+// view 4
+
+export const TextTel = styled.Text`
+    font-weight: bold;
+    padding-left: 8px;
+    font-size: 11px;
     margin-bottom: 3%;
 `;
+
+export const TextTelPrest =  styled.Text`
+    font-size: 10px;
+    padding-left: 4px;
+    padding-top: 0.5%;
+`;
+
+export const TextCel = styled.Text`
+    font-weight: bold;
+    padding-left: 4px;
+    font-size: 11px;
+`;
+
+export const TextCelPrest =  styled.Text`
+    font-size: 10px;
+    padding-left: 4px;
+    padding-top: 0.5%;
+`; 
+
+// fim View 4
 export const ViewFlatList = styled.View`
     flex: 1; 
 `;

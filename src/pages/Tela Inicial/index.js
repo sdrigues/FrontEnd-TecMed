@@ -28,7 +28,7 @@ export default function TelaInicial(){
            <ViewTop>
            <LogoImg source={Logo}/>
            <Title>Bem Vindo Samuel{}</Title>
-            <SubTitleTop>Resumo Proxmos 30 Dias</SubTitleTop>
+            <SubTitleTop>Resumo Proximos 30 Dias</SubTitleTop>
             </ViewTop>
 
            <ViewCard>

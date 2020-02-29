@@ -14,20 +14,30 @@ import {
   //View 1
   TextPrestador,
   TextNomePrestador,
-  TextTipoGuia,
-  TextGuia,
+
+  TextEnd,
+  TextEndPrestador,
  
   //View 2
   TextTipoEspecialidade,
   TextEspecialidade,
-  TextStatus,
-  TextTipoStatus,
+  TextNum,
+  TextNumPrest,
 
   //View 3
-  TextData,
-  TextDtCad,
-  TextTipoDtConsultaEfetuada,
-  TextDtConsultaEfetuada,
+  TextCep,
+  TextCepPrest,
+  TextBairro,
+  TextBairroPrest,
+  TextCidade,
+  TextCidadePrest,
+
+  //View 4
+  TextTel,
+  TextTelPrest,
+  TextCel,
+  TextCelPrest,
+
 
   ViewFlatList,
   Button,
@@ -36,7 +46,7 @@ import {
   TextInput,
 
   ViewTitle,
-  TextNGuia
+  TextNomePrest
 } from './styles';
 
 import api from '../../services/api';
@@ -58,32 +68,43 @@ export default class App extends Component {
   renderItem = ({ item }) => (
     <ViewItem>
         <ViewTitle>
-          <TextTitle>Guia: </TextTitle>
-          <TextNGuia>123456{}</TextNGuia>
+          <TextTitle>Prestador:</TextTitle>
+          <TextNomePrest>José da Silva Campos{}</TextNomePrest>
         </ViewTitle>
       
       <ViewConteudo>
-        <TextPrestador>Prestador:</TextPrestador>
-          <TextNomePrestador>José da Silva Cunha{}</TextNomePrestador>
-          <TextGuia>Tipo de guia:</TextGuia>
-          <TextTipoGuia>Consulta{}</TextTipoGuia>
-      </ViewConteudo>
-
-      <ViewConteudo>
         <TextEspecialidade>Especialidade:</TextEspecialidade> 
         <TextTipoEspecialidade>Oftalmologia{}</TextTipoEspecialidade>
-        <TextStatus>Status:</TextStatus>
-        <TextTipoStatus>Efetuada{}</TextTipoStatus>
+      </ViewConteudo>
+
+      <ViewConteudo>
+          <TextEnd>Endereço:</TextEnd>
+          <TextEndPrestador>Avenida Algusto da Cunha Silva{}</TextEndPrestador>
+
+          <TextNum>N:</TextNum>
+          <TextNumPrest>200</TextNumPrest>
       </ViewConteudo>
 
 
       <ViewConteudo>
-          <TextDtCad>Data Consulta:</TextDtCad>
-          <TextData>20-10-2020</TextData>
+          <TextCep>CEP:</TextCep> 
+          <TextCepPrest>18072-831{}</TextCepPrest>
 
-        <TextDtConsultaEfetuada>Data Realizada:</TextDtConsultaEfetuada> 
-        <TextTipoDtConsultaEfetuada>20-10-2020{}</TextTipoDtConsultaEfetuada>
+          <TextBairro>Bairro:</TextBairro> 
+          <TextBairroPrest>Bom Jesus{}</TextBairroPrest>
+
+          <TextCidade>Cidade:</TextCidade> 
+          <TextCidadePrest>Sorocaba{}</TextCidadePrest>
       </ViewConteudo>
+
+      <ViewConteudo>
+          <TextTel>Telefone:</TextTel>
+          <TextTelPrest>(15) 3352-6168{}</TextTelPrest>
+
+          <TextCel>Celular:</TextCel>
+          <TextCelPrest>(15) 98134-4323</TextCelPrest>
+      </ViewConteudo>
+      
     </ViewItem>
   );
 
