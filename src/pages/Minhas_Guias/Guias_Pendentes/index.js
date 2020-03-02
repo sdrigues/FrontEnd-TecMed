@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StatusBar } from 'react-native';
 
 import {
@@ -32,9 +32,7 @@ import {
   TextDtConsultaEfetuada,
 
   ViewFlatList,
-  Button,
   ViewTop,
-  TextButton,
   TextInput,
 
   ViewTitle,
@@ -44,26 +42,29 @@ import {
 import api from '../../../services/api';
 import Qrcode from '../../../assets/images/Qrcode.png';
 
-export default class App extends Component {
-  state = {
-    docs:[],
-  };
-  componentDidMount() {
-    this.loadCliente();
+export default function App({navigation}) {
+  const [doc, setDoc] = useState('');
+
+  useEffect(() => { 
+    loadDados();
+  }, 
+  []);
+
+  const loadDados = async () => {
+    const response = await api.get('/products');
+    const { docs } = response.data;
+    setDoc(docs);
   }
 
-  loadCliente = async () => {
-      const response = await api.get('/products');
-      const { docs } = response.data;
-
-      this.setState({ docs })
-  }
-  renderItem = ({ item }) => (
+  const renderItem = ({ item }) => (
     <ViewItem>
         <ViewTitle>
           <TextTitle>Guia: </TextTitle>
           <TextNGuia>123456{}</TextNGuia>
-          <BtnQRcode>
+          <BtnQRcode 
+            onPress={() => navigation.navigate('Qrcode', {
+              ID: item,
+            })}>
             <ImageButton source={Qrcode} />
           </BtnQRcode>
         </ViewTitle>
@@ -92,8 +93,6 @@ export default class App extends Component {
       </ViewConteudo>
     </ViewItem>
   );
-
-  render() {
     return (
       <Container>
           <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
@@ -106,13 +105,12 @@ export default class App extends Component {
         <ViewFlatList>
           <FlatList
             style={{ marginTop: 15 }}
-            data={this.state.docs}
-            renderItem={this.renderItem}
+            data={doc}
+            renderItem={renderItem}
             keyExtractor={item => item.id}
           />
         </ViewFlatList>
        
         </Container>
           );
-  }
 }
