@@ -10,6 +10,8 @@ import {
   TextTitle,
   ViewItem,
   ViewConteudo,
+  BtnQRcode,
+  ImageButton,
 
   //View 1
   TextPrestador,
@@ -40,6 +42,7 @@ import {
 } from './styles';
 
 import api from '../../../services/api';
+import Qrcode from '../../../assets/images/Qrcode.png';
 
 export default class App extends Component {
   state = {
@@ -60,6 +63,9 @@ export default class App extends Component {
         <ViewTitle>
           <TextTitle>Guia: </TextTitle>
           <TextNGuia>123456{}</TextNGuia>
+          <BtnQRcode>
+            <ImageButton source={Qrcode} />
+          </BtnQRcode>
         </ViewTitle>
       
       <ViewConteudo>

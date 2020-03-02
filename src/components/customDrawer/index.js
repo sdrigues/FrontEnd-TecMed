@@ -62,7 +62,7 @@ export default function DrawerContent({props, navigation}) {
                 paddingLeft: 50,
                 paddingTop: 10,
                 borderRadius: 9,
-            } }
+            }}
           />
         </ConteudoMenu>
 
