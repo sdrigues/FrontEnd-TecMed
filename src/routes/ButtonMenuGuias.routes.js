@@ -12,7 +12,7 @@ const Tab = createMaterialBottomTabNavigator();
 export default function MyTabs() {
   return (
     <Tab.Navigator
-      initialRouteName="GuiasEfetuadas"
+      initialRouteName="GuiasPendentes"
       activeColor="#FFF"
       inactiveColor="#FAFAFA"
 

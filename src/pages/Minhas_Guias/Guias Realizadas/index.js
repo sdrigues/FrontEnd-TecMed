@@ -1,13 +1,26 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StatusBar } from 'react-native';
 
 import {
-  Container, 
+  Container,
+
+  //topview
+  TopView,
   Descricao,
+  BtnVoltar,
+
+  // input 
+  ViewTop,
+  TextInput,
+
+  //conteudo
+  ViewFlatList,
   FlatList,
 
   //View Title
   TextTitle,
+  TextNGuia,
+  ViewTitle,
   ViewItem,
   ViewConteudo,
 
@@ -16,7 +29,7 @@ import {
   TextNomePrestador,
   TextTipoGuia,
   TextGuia,
- 
+
   //View 2
   TextTipoEspecialidade,
   TextEspecialidade,
@@ -29,45 +42,42 @@ import {
   TextTipoDtConsultaEfetuada,
   TextDtConsultaEfetuada,
 
-  ViewFlatList,
-  ViewTop,
-  TextInput,
-  ViewTitle,
-  TextNGuia
+  
 } from './styles';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import api from '../../../services/api';
 
-export default class App extends Component {
-  state = {
-    docs:[],
-  };
-  componentDidMount() {
-    this.loadCliente();
+export default function GuiasEfetuadas({ navigation }) {
+  const [doc, setDoc] = useState('');
+
+  useEffect(() => {
+    loadCliente();
+  }, []);
+
+  const loadCliente = async () => {
+    const response = await api.get('/products');
+    const { docs } = response.data;
+
+    setDoc(docs);
   }
 
-  loadCliente = async () => {
-      const response = await api.get('/products');
-      const { docs } = response.data;
-
-      this.setState({ docs })
-  }
-  renderItem = ({ item }) => (
+  const renderItem = ({ item }) => (
     <ViewItem>
-        <ViewTitle>
-          <TextTitle>Guia: </TextTitle>
-          <TextNGuia>123456{}</TextNGuia>
-        </ViewTitle>
-      
+      <ViewTitle>
+        <TextTitle>Guia: </TextTitle>
+        <TextNGuia>123456{}</TextNGuia>
+      </ViewTitle>
+
       <ViewConteudo>
         <TextPrestador>Prestador:</TextPrestador>
-          <TextNomePrestador>José da Silva Cunha{}</TextNomePrestador>
-          <TextGuia>Tipo de guia:</TextGuia>
-          <TextTipoGuia>Consulta{}</TextTipoGuia>
+        <TextNomePrestador>José da Silva Cunha{}</TextNomePrestador>
+        <TextGuia>Tipo de guia:</TextGuia>
+        <TextTipoGuia>Consulta{}</TextTipoGuia>
       </ViewConteudo>
 
       <ViewConteudo>
-        <TextEspecialidade>Especialidade:</TextEspecialidade> 
+        <TextEspecialidade>Especialidade:</TextEspecialidade>
         <TextTipoEspecialidade>Oftalmologia{}</TextTipoEspecialidade>
         <TextStatus>Status:</TextStatus>
         <TextTipoStatus>Efetuada{}</TextTipoStatus>
@@ -75,35 +85,40 @@ export default class App extends Component {
 
 
       <ViewConteudo>
-          <TextDtCad>Data Consulta:</TextDtCad>
-          <TextData>20-10-2020</TextData>
+        <TextDtCad>Data Consulta:</TextDtCad>
+        <TextData>20-10-2020</TextData>
 
-        <TextDtConsultaEfetuada>Data Realizada:</TextDtConsultaEfetuada> 
+        <TextDtConsultaEfetuada>Data Realizada:</TextDtConsultaEfetuada>
         <TextTipoDtConsultaEfetuada>20-10-2020{}</TextTipoDtConsultaEfetuada>
       </ViewConteudo>
     </ViewItem>
   );
 
-  render() {
-    return (
-      <Container>
-          <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
-          <Descricao>Guias Efetuadas</Descricao>
-        <ViewTop>
-            <TextInput placeholder="Buscar Guias" />
-        </ViewTop>
-        
-       
-        <ViewFlatList>
-          <FlatList
-            style={{ marginTop: 15 }}
-            data={this.state.docs}
-            renderItem={this.renderItem}
-            keyExtractor={item => item.id}
-          />
-        </ViewFlatList>
-       
-        </Container>
-          );
-  }
+  return (
+    <Container>
+      <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
+      <TopView>
+        <BtnVoltar onPress={() => navigation.navigate('Home')} >
+          <Icon name="chevron-left" size={30} color="rgba(0,0,0,0.5)" />
+        </BtnVoltar>
+        <Descricao>Guias Efetuadas</Descricao>
+      </TopView>
+
+      <ViewTop>
+        <TextInput placeholder="Buscar Guias" />
+      </ViewTop>
+
+
+      <ViewFlatList>
+        <FlatList
+          style={{ marginTop: 15 }}
+          data={doc}
+          renderItem={renderItem}
+          keyExtractor={item => item.id}
+        />
+      </ViewFlatList>
+
+    </Container>
+  );
+
 }

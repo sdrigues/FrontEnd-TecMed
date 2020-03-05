@@ -2,23 +2,39 @@ import React, { useState, useEffect } from 'react';
 import { StatusBar } from 'react-native';
 
 import {
-  Container, 
+  Container,
+
+  //Top
+  TopView,
+  BtnVoltar,
   Descricao,
+
+  //title
+  ViewTop,
+  TextInput,
+
+  //Conteudo
+  ViewFlatList,
   FlatList,
 
+
+  //FlatList Conteudo
+
   //View Title
-  TextTitle,
   ViewItem,
-  ViewConteudo,
+  ViewTitle,
+  TextTitle,
+  TextNGuia,
   BtnQRcode,
   ImageButton,
+  ViewConteudo,
 
   //View 1
   TextPrestador,
   TextNomePrestador,
   TextTipoGuia,
   TextGuia,
- 
+
   //View 2
   TextTipoEspecialidade,
   TextEspecialidade,
@@ -31,24 +47,22 @@ import {
   TextTipoDtConsultaEfetuada,
   TextDtConsultaEfetuada,
 
-  ViewFlatList,
-  ViewTop,
-  TextInput,
+  
 
-  ViewTitle,
-  TextNGuia
+
+
 } from './styles';
-
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import api from '../../../services/api';
 import Qrcode from '../../../assets/images/Qrcode.png';
 
-export default function App({navigation}) {
+export default function App({ navigation }) {
   const [doc, setDoc] = useState('');
 
-  useEffect(() => { 
+  useEffect(() => {
     loadDados();
-  }, 
-  []);
+  },
+    []);
 
   const loadDados = async () => {
     const response = await api.get('/products');
@@ -58,26 +72,26 @@ export default function App({navigation}) {
 
   const renderItem = ({ item }) => (
     <ViewItem>
-        <ViewTitle>
-          <TextTitle>Guia: </TextTitle>
-          <TextNGuia>123456{}</TextNGuia>
-          <BtnQRcode 
-            onPress={() => navigation.navigate('Qrcode', {
-              ID: item,
-            })}>
-            <ImageButton source={Qrcode} />
-          </BtnQRcode>
-        </ViewTitle>
-      
+      <ViewTitle>
+        <TextTitle>Guia: </TextTitle>
+        <TextNGuia>123456{}</TextNGuia>
+        <BtnQRcode
+          onPress={() => navigation.navigate('Qrcode', {
+            ID: item,
+          })}>
+          <ImageButton source={Qrcode} />
+        </BtnQRcode>
+      </ViewTitle>
+
       <ViewConteudo>
         <TextPrestador>Prestador:</TextPrestador>
-          <TextNomePrestador>José da Silva Cunha{}</TextNomePrestador>
-          <TextGuia>Tipo de guia:</TextGuia>
-          <TextTipoGuia>Consulta{}</TextTipoGuia>
+        <TextNomePrestador>José da Silva Cunha{}</TextNomePrestador>
+        <TextGuia>Tipo de guia:</TextGuia>
+        <TextTipoGuia>Consulta{}</TextTipoGuia>
       </ViewConteudo>
 
       <ViewConteudo>
-        <TextEspecialidade>Especialidade:</TextEspecialidade> 
+        <TextEspecialidade>Especialidade:</TextEspecialidade>
         <TextTipoEspecialidade>Oftalmologia{}</TextTipoEspecialidade>
         <TextStatus>Status:</TextStatus>
         <TextTipoStatus>Efetuada{}</TextTipoStatus>
@@ -85,32 +99,38 @@ export default function App({navigation}) {
 
 
       <ViewConteudo>
-          <TextDtCad>Data Consulta:</TextDtCad>
-          <TextData>20-10-2020</TextData>
+        <TextDtCad>Data Consulta:</TextDtCad>
+        <TextData>20-10-2020</TextData>
 
-        <TextDtConsultaEfetuada>Data Realizada:</TextDtConsultaEfetuada> 
+        <TextDtConsultaEfetuada>Data Realizada:</TextDtConsultaEfetuada>
         <TextTipoDtConsultaEfetuada>20-10-2020{}</TextTipoDtConsultaEfetuada>
       </ViewConteudo>
     </ViewItem>
   );
-    return (
-      <Container>
-          <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
-          <Descricao>Guias Pendentes</Descricao>
-        <ViewTop>
-            <TextInput placeholder="Buscar Guias" />
-        </ViewTop>
-        
-       
-        <ViewFlatList>
-          <FlatList
-            style={{ marginTop: 15 }}
-            data={doc}
-            renderItem={renderItem}
-            keyExtractor={item => item.id}
-          />
-        </ViewFlatList>
-       
-        </Container>
-          );
+  return (
+    <Container>
+      <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
+      <TopView>
+        <BtnVoltar onPress={() => navigation.navigate('Home')} >
+          <Icon name="chevron-left" size={30} color="rgba(0,0,0,0.5)" />
+        </BtnVoltar>
+        <Descricao>Guias Efetuadas</Descricao>
+      </TopView>
+
+      <ViewTop>
+        <TextInput placeholder="Buscar Guias" />
+      </ViewTop>
+
+
+      <ViewFlatList>
+        <FlatList
+          style={{ marginTop: 15 }}
+          data={doc}
+          renderItem={renderItem}
+          keyExtractor={item => item.id}
+        />
+      </ViewFlatList>
+
+    </Container>
+  );
 }

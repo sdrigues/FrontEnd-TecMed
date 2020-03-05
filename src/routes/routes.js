@@ -6,6 +6,7 @@ import Login from '../pages/Login';
 import Cadastrar from '../pages/Cadastrar';
 import Qrcode from '../pages/QrCode_Guias';
 
+
 //Routes
 import Home from './Drawer_Menu';
 
@@ -20,7 +21,6 @@ export default function Routes() {
       <Stack.Screen name="Cadastrar" component={Cadastrar} />
       <Stack.Screen name="Home"  component={Home}/>
       <Stack.Screen name="Qrcode" component={Qrcode} />
-      
     </Stack.Navigator>
   );
 }

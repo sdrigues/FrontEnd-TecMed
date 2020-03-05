@@ -3,56 +3,53 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   flex: 1;
 `;
-export const FlatList = styled.FlatList``;
 
-export const Logo = styled.Text`
-    font-size: 23px;
-    margin-top: 4%;
-    margin-left: 70%;
+
+//Top 
+export const TopView = styled.KeyboardAvoidingView`
+    flex-direction: row;
 `;
 
+export const Descricao = styled.Text`
+    font-size: 25px;
+    color: #5EE0B6;
+    margin-top: 4%;
+    margin-left: 2%;
+`;
+
+export const BtnVoltar = styled.TouchableOpacity`
+    margin-top: 5%;
+    margin-left: 7%;
+`;
+
+//input 
 export const ViewTop = styled.View`
     flex-direction: row;
     margin-left: 5%;
-    margin-top: 5%;
-    height: 9%;
-`;
-
-export const TextButton = styled.Text`
-    font-size: 25px;
-    padding-top: 5%;
-    padding-left: 30%;
-`;
-
-export const Button = styled.TouchableOpacity`
-    width: 9%;
-    margin-left: 1%;
 `;
 
 export const TextInput = styled.TextInput`
-    width: 90%;
+    width: 95%;
+    margin-top: 8%;
     background-color: #FFF;
     elevation: 4px;
     padding-left: 15px;
     border-radius: 5px;
 `;
 
-export const Descricao = styled.Text`
-    font-size: 25px;
-    color: #5EE0B6;
-    margin-top: 3%;
-    margin-left: 5%;
+
+// conteudo
+export const ViewFlatList = styled.View`
+    flex: 1; 
 `;
+
+
+export const FlatList = styled.FlatList`
+
+`;
+
 
 //FlatListItems
-
-export const ViewItem = styled.View`
-    background-color: rgba(0,0,0,0.1);
-    margin-top: 10px; 
-    margin-left: 3%;
-    border-radius: 10px;
-    width: 95%;
-`;
 
 //FlatListItems Title
 
@@ -77,6 +74,16 @@ export const ViewConteudo= styled.View`
     margin-left: 5%;
     margin-top: 2%;
 `;
+
+export const ViewItem = styled.View`
+    background-color: rgba(0,0,0,0.1);
+    margin-top: 10px; 
+    margin-left: 3%;
+    border-radius: 10px;
+    width: 95%;
+`;
+
+
 
 //FlatListItems View 1
 
@@ -151,7 +158,4 @@ export const TextTipoDtConsultaEfetuada = styled.Text`
     padding-top: 0.5%;
     padding-left: 4px;
     margin-bottom: 3%;
-`;
-export const ViewFlatList = styled.View`
-    flex: 1; 
 `;

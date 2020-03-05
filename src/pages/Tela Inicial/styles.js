@@ -4,8 +4,18 @@ export const Container = styled.View`
   flex: 1;
   background-color: #FFF;
 `;
+
+
+export const HeaderView = styled.View`
+    flex-direction: row;
+`;
+
 export const ViewTop = styled.View``;
 
+export const BtnOpenDrawer = styled.TouchableOpacity`
+margin-top: 6%;
+margin-left: 6%;
+`;
 export const Title  = styled.Text`
     font-size: 25px;
     margin-top: 3%;
@@ -20,7 +30,7 @@ export const Title  = styled.Text`
 export const LogoImg = styled.Image`
     width: 60px;
     height: 90px;
-    margin-left: 78%;
+    margin-left: 60%;
 `;
 
 export const SubTitleTop = styled.Text`
@@ -30,7 +40,7 @@ export const SubTitleTop = styled.Text`
     margin-bottom: 5%;
 `;
 
-export const ViewCard = styled.View`
+export const ViewCard = styled.TouchableOpacity`
     margin-left: 11%;
     margin-top: 10px;
     background-color: rgba(202, 202, 202, 0.2);
