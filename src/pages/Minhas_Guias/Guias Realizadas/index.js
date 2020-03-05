@@ -30,11 +30,8 @@ import {
   TextDtConsultaEfetuada,
 
   ViewFlatList,
-  Button,
   ViewTop,
-  TextButton,
   TextInput,
-
   ViewTitle,
   TextNGuia
 } from './styles';

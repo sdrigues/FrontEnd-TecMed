@@ -55,12 +55,12 @@ export default function DrawerContent({props, navigation}) {
                 backgroundColor: '#5EE0B6', 
                 color: '#FFF',  
                 fontSize: 17, 
-                marginTop: 20,
+                marginTop: 0,
                 marginLeft: 30, 
                 width: 200,
                 height: 50,
                 paddingLeft: 50,
-                paddingTop: 10,
+                paddingTop: 11,
                 borderRadius: 9,
             }}
           />
