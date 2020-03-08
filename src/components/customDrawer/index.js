@@ -11,9 +11,10 @@ import {
     ImagemUsuaro,
     TxtBtnPerfil,
     ConteudoMenu,
-    ViewBntSingOut
+    ViewBntSingOut,
+    BtnFecharDrawer
 } from './styles';
-
+import Icon from 'react-native-vector-icons/MaterialIcons';
 export default function DrawerContent({props, navigation}) {
   return (
     <DrawerContentScrollView {...props}>
@@ -21,6 +22,9 @@ export default function DrawerContent({props, navigation}) {
         <ViewPerfil>
             <ImagemUsuaro source={User}/>
             <NomeUsuario>Samuel</NomeUsuario>
+            <BtnFecharDrawer onPress={() => navigation.closeDrawer()}>
+              <Icon name="reply" size={25} color="rgba(0,0,0,0.8)" />
+            </BtnFecharDrawer>
         </ViewPerfil>
         <BtnPerfil>
             <TxtBtnPerfil>

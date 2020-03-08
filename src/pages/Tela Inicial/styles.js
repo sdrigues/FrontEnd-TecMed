@@ -49,7 +49,7 @@ export const ViewCard = styled.TouchableOpacity`
     border-radius: 10px;
     border-color: #CACACA; 
     border-width: 1px;
-    border-top-width: 3px;
+    border-top-width: 2px;
 `;
 
 export const ViewTitle = styled.View`

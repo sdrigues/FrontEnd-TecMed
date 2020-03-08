@@ -3,6 +3,26 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   flex: 1;
 `;
+
+
+//Top 
+export const TopView = styled.KeyboardAvoidingView`
+    flex-direction: row;
+`;
+
+export const Descricao = styled.Text`
+    font-size: 25px;
+    color: #5EE0B6;
+    margin-top: 4%;
+    margin-left: 2%;
+`;
+
+export const BtnVoltar = styled.TouchableOpacity`
+    margin-top: 5%;
+    margin-left: 7%;
+`;
+
+
 export const FlatList = styled.FlatList``;
 
 export const Logo = styled.Text`
@@ -37,12 +57,6 @@ export const TextInput = styled.TextInput`
     border-radius: 5px;
 `;
 
-export const Descricao = styled.Text`
-    font-size: 25px;
-    color: #5EE0B6;
-    margin-top: 3%;
-    margin-left: 5%;
-`;
 
 //FlatListItems
 

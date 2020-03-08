@@ -5,7 +5,10 @@ export const Container = styled.View`
 `;
 export const ViewPerfil = styled.View`
     flex-direction: row;
-
+`;
+export const BtnFecharDrawer = styled.TouchableOpacity`
+    margin-left: 20%;
+    margin-top: 5%;
 `;
 export const ImagemUsuaro = styled.Image`
     width: 50px;

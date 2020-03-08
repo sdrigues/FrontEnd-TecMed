@@ -29,7 +29,7 @@ export default function TelaInicial({ navigation }) {
         <Container>
             <HeaderView>
                 <BtnOpenDrawer onPress={() => navigation.openDrawer()} >
-                    <Icon name="chevron-right" size={30} color="rgba(0,0,0,0.5)" />
+                    <Icon name="reorder" size={35} color="rgba(0,0,0,0.5)" />
                 </BtnOpenDrawer>
                 <LogoImg source={Logo} />
             </HeaderView>
