@@ -17,9 +17,9 @@ import {
 
  } from './styles';
 
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import logo from '../../assets/images/Logo.jpg';
-import arrow from '../../assets/images/arrow.png';
 
 export default function Login({ navigation }){
     const [offset] = useState(new Animated.ValueXY({ x: 0, y: 100 }));
@@ -87,7 +87,7 @@ export default function Login({ navigation }){
                         </BtnCadastrar>
 
                         <BtnEntrar onPress={() => verificaDados()}>
-                          <ImgEntrar source={arrow}/>
+                         <Icon name="keyboard-arrow-right" size={35} color="#FFF" />
                         </BtnEntrar>
                       </ViewButton>
 

@@ -66,17 +66,9 @@ export const BtnEntrar = styled.TouchableOpacity`
     border-color: #5EE0B6;
     margin-left: 50px;
     border-radius: 35px;
-    align-items: center;
-    align-content: center;
+    padding-top:5%;
+    padding-left: 6%;
     background-color: #5EE0B6;
-`;
-export const ImgEntrar = styled.Image`
-    width: 20px;
-    height: 20px;
-    margin-top: 23px;
-    margin-left: 2px;
-    align-items: center;
-    align-content: center;
 `;
 export const ViewBtnEsqueceuSenha = styled.View`
     flex-direction: row;
