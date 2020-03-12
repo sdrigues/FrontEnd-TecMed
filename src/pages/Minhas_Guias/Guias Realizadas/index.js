@@ -49,24 +49,37 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import api from '../../../services/api';
 
 export default function GuiasEfetuadas({ navigation }) {
-  const [doc, setDoc] = useState('');
+  const [data, setData] = useState();
+  const [temp, setTemp] = useState();
 
   useEffect(() => {
-    loadCliente();
+    loadData();
   }, []);
 
-  const loadCliente = async () => {
+  const loadData = async () => {
     const response = await api.get('/products');
     const { docs } = response.data;
 
-    setDoc(docs);
+    setData(docs);
+    setTemp(docs);
   }
+
+  const searchFilterFunction = text => {
+    const newData = temp.filter(item => {
+      const itemData = `${item.title.toUpperCase()}`;
+      const textData = text.toUpperCase();
+      return itemData.indexOf(textData) > -1;
+    });
+
+    setData(newData);
+  };
+
 
   const renderItem = ({ item }) => (
     <ViewItem>
       <ViewTitle>
         <TextTitle>Guia: </TextTitle>
-        <TextNGuia>123456{}</TextNGuia>
+        <TextNGuia>{item.title}</TextNGuia>
       </ViewTitle>
 
       <ViewConteudo>
@@ -105,16 +118,16 @@ export default function GuiasEfetuadas({ navigation }) {
       </TopView>
 
       <ViewTop>
-        <TextInput placeholder="Buscar Guias" />
+      <TextInput placeholder="Buscar Guias" onChangeText={text => searchFilterFunction(text)} />
       </ViewTop>
 
 
       <ViewFlatList>
         <FlatList
           style={{ marginTop: 15 }}
-          data={doc}
+          data={data}
           renderItem={renderItem}
-          keyExtractor={item => item.id}
+          keyExtractor={item => item.title}
         />
       </ViewFlatList>
 

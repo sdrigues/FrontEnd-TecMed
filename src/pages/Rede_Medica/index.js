@@ -56,22 +56,35 @@ import api from '../../services/api';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default function RedeMedica({ navigation }) {
-  const [doc, setDoc] = useState('');
+  const [data, setData] = useState();
+  const [temp, setTemp] = useState();
+
   useEffect(() => {
-    loadCliente()
+    loadData();
   }, []);
 
-  const loadCliente = async () => {
+  const loadData = async () => {
     const response = await api.get('/products');
     const { docs } = response.data;
 
-    setDoc(docs);
+    setData(docs);
+    setTemp(docs);
   }
+
+  const searchFilterFunction = text => {
+    const newData = temp.filter(item => {
+      const itemData = `${item.title.toUpperCase()}`;
+      const textData = text.toUpperCase();
+      return itemData.indexOf(textData) > -1;
+    });
+
+    setData(newData);
+  };
   const renderItem = ({ item }) => (
     <ViewItem>
       <ViewTitle>
         <TextTitle>Prestador:</TextTitle>
-        <TextNomePrest>José da Silva Campos{}</TextNomePrest>
+        <TextNomePrest>{item.title}</TextNomePrest>
       </ViewTitle>
 
       <ViewConteudo>
@@ -120,14 +133,14 @@ export default function RedeMedica({ navigation }) {
         </TopView>
 
         <ViewTop>
-          <TextInput placeholder="Digite a especialidade ou o Médico" />
+        <TextInput placeholder="Digite a especialidade ou o Médico" onChangeText={text => searchFilterFunction(text)} />
         </ViewTop>
 
 
         <ViewFlatList>
           <FlatList
             style={{ marginTop: 15 }}
-            data={doc}
+            data={data}
             renderItem={renderItem}
             keyExtractor={item => item.id}
           />

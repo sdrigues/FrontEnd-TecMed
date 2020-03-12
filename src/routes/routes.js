@@ -6,7 +6,6 @@ import Login from '../pages/Login';
 import Cadastrar from '../pages/Cadastrar';
 import Qrcode from '../pages/QrCode_Guias';
 
-
 //Routes
 import Home from './Drawer_Menu';
 

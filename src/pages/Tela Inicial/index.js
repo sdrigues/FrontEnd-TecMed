@@ -34,13 +34,13 @@ export default function TelaInicial({ navigation }) {
                 <LogoImg source={Logo} />
             </HeaderView>
             <ViewTop>
-                <Title>Bem Vindo Samuel{}</Title>
-                <SubTitleTop>Resumo Proximos 30 Dias</SubTitleTop>
+                <Title>Bem-vindo Samuel{}</Title>
+                <SubTitleTop>Resumo Próximos 30 Dias</SubTitleTop>
             </ViewTop>
 
             <ViewCard onPress={() => navigation.navigate('Guias') } >
                 <ViewTitle>
-                    <TitleCard>Consultas Pendetes</TitleCard>
+                    <TitleCard>Consultas Pendentes</TitleCard>
                 </ViewTitle>
                 <ViewSubTitle>
                     <SubTitleCard>próximos 30 Dias</SubTitleCard>
