@@ -25,8 +25,6 @@ import {
   ViewTitle,
   TextTitle,
   TextNGuia,
-  BtnQRcode,
-  ImageButton,
   ViewConteudo,
 
   //View 1
@@ -54,7 +52,6 @@ import {
 } from './styles';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import api from '../../../services/api';
-import Qrcode from '../../../assets/images/Qrcode.png';
 
 export default function App({ navigation }) {
   const [data, setData] = useState();
@@ -81,17 +78,15 @@ export default function App({ navigation }) {
 
     setData(newData);
   };
+
   const renderItem = ({ item }) => (
-    <ViewItem>
+    <ViewItem onPress={() => navigation.navigate('Qrcode', {
+      ID: item,
+    })}>
       <ViewTitle>
         <TextTitle>Guia: </TextTitle>
         <TextNGuia>{item.title}</TextNGuia>
-        <BtnQRcode
-          onPress={() => navigation.navigate('Qrcode', {
-            ID: item,
-          })}>
-          <ImageButton source={Qrcode} />
-        </BtnQRcode>
+       <Icon name="touch-app"size={30} color="rgba(0,0,0,0.7)" />
       </ViewTitle>
 
       <ViewConteudo>

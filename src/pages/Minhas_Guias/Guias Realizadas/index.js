@@ -111,7 +111,7 @@ export default function GuiasEfetuadas({ navigation }) {
     <Container>
       <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
       <TopView>
-        <BtnVoltar  >
+        <BtnVoltar onPress={() => navigation.navigate('Home')} >
           <Icon name="chevron-left" size={30} color="rgba(0,0,0,0.5)" />
         </BtnVoltar>
         <Descricao>Guias Efetuadas</Descricao>

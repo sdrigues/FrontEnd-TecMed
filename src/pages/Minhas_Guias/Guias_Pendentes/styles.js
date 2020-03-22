@@ -49,19 +49,20 @@ export const FlatList = styled.FlatList`
 
 //FlatListItems
 
-export const ViewItem = styled.View`
+export const ViewItem = styled.TouchableOpacity`
     background-color: rgba(0,0,0,0.1);
     margin-top: 10px; 
     margin-left: 3%;
     border-radius: 10px;
     width: 95%;
+    height: 170px;
 `;
 
 //FlatListItems Title
 
 export const ViewTitle = styled.View`
    flex-direction: row;
-   margin-top: 2%;
+   margin-top: 3%;
    margin-left: 5%;
 `;
 export const TextTitle = styled.Text`
@@ -69,31 +70,24 @@ export const TextTitle = styled.Text`
     font-size: 23px;
 `;
 export const TextNGuia = styled.Text`
-    color: #5EE0B6;
+    color: rgba(0,0,0,0.7);
     font-size: 21px;
     padding-top: 1%;
-`;
-
-export const BtnQRcode = styled.TouchableOpacity`   
-    margin-left: 37%;
-`;
-export const ImageButton = styled.Image`
-    height: 40px;
-    width: 40px;
+    margin-right: 5%;
 `;
 
 //FlatListItems View
 export const ViewConteudo= styled.View`
     flex-direction: row;
     margin-left: 5%;
-    margin-top: 1%;
+    margin-top: 3%;
 `;
 
 //FlatListItems View 1
 
 export const TextPrestador = styled.Text`
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
 `;
 
 export const TextNomePrestador =  styled.Text`
