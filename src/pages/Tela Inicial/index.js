@@ -47,6 +47,7 @@ export default function TelaInicial({ navigation }) {
                 </ViewSubTitle>
 
                 <ViewConteudo>
+                    <Icon name="touch-app" size={30} color="rgba(0,0,0,0.7)"/>
                     <ConsText>Total: </ConsText>
                     <ValConsultas>1</ValConsultas>
                 </ViewConteudo>
