@@ -30,19 +30,7 @@ export default function Project() {
 
         <View style={styles.MainContainer}>
 
-            <Picker
-                selectedValue={doc}
-
-                onValueChange={(itemValue, itemIndex) => setPickerValueHolder(itemValue) }>
-
-                {doc.map((item, key) => (
-                    <Picker.Item label={item.title} value={item.title} key={key} />)
-                )}
-
-            </Picker>
-
-            <Button title="Click Here To Get Picker Selected Item Value" onPress={GetPickerSelectedItemValue()} />
-
+            
         </View>
 
     );

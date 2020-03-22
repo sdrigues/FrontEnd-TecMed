@@ -54,7 +54,7 @@ export default function DrawerContent({props, navigation}) {
           />
               <DrawerItem
             label="Emitir Guia"
-            onPress={() => navigation.navigate('Teste') }
+            onPress={() => navigation.navigate('EmitirGuia') }
             labelStyle={{ 
                 backgroundColor: '#5EE0B6', 
                 color: '#FFF',  
