@@ -1,49 +1,96 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import { AppRegistry, StyleSheet, View, Platform, Picker, ActivityIndicator, Button, Alert } from 'react-native';
+import {
+    Container,
+    ViewTop,
+    BtnVoltar,
+    Title,
 
-export default function Project() {
 
-    const [doc, setDoc] = useState('');
-    const [PickerValueHolder, setPickerValueHolder] = useState('');
+    ViewCorpo,
 
-    useEffect(() => {
-        loadCliente();
-    }, []);
+    ViewSolicitante,
+    ViewTitle,
+    TitleSolicitante,
+    Solicitante,
+    BtnAdd,
 
-    const loadCliente = async () => {
-        const response = await api.get('/products');
-        const { docs } = response.data;
+    ViewPrestador,
+    ViewAgendamento,
+    ViewLocalAtendimento,
+    ViewTipoConsulta
 
-        setDoc(docs);
-    }
 
-    const GetPickerSelectedItemValue = () => {
 
-        Alert.alert(PickerValueHolder);
+} from './styles';
 
-    }
-
+export default function EmitirGuia({ navigation, route }) {
+    const { solicitante, idSolicitante } = route.params;
+    const { prestador, idPrestador } = route.params;
 
     return (
+        <Container>
+            <ViewTop>
+                <BtnVoltar onPress={() => navigation.navigate('Home')}>
+                    <Icon name="keyboard-arrow-left" size={30} color="#000" />
+                </BtnVoltar>
+                <Title>Emissão de Guias</Title>
+            </ViewTop>
 
-        <View style={styles.MainContainer}>
+            <ViewCorpo>
+                <ViewSolicitante>
+                    <ViewTitle>
+                        <TitleSolicitante>Solicitante</TitleSolicitante>
+                        <BtnAdd onPress={() => navigation.navigate('Solicitante')}>
+                            <Icon name="add-circle-outline" size={30} color="#5EE0B6" />
+                        </BtnAdd>
+                    </ViewTitle>
+                    <Solicitante>{solicitante}</Solicitante>
+                </ViewSolicitante>
 
-            
-        </View>
+                <ViewPrestador>
+                    <ViewTitle>
+                        <TitleSolicitante>Prestador </TitleSolicitante>
+                        <BtnAdd onPress={() => navigation.navigate('Prestador')}>
+                            <Icon name="add-circle-outline" size={30} color="#5EE0B6" />
+                        </BtnAdd>
+                    </ViewTitle>
+                    <Solicitante>{prestador}</Solicitante>
+                </ViewPrestador>
 
+                <ViewAgendamento>
+                    <ViewTitle>
+                        <TitleSolicitante>Agendamento</TitleSolicitante>
+                        <BtnAdd onPress={() => navigation.navigate('')}>
+                            <Icon name="add-circle-outline" size={30} color="#5EE0B6" />
+                        </BtnAdd>
+                    </ViewTitle>
+                    <Solicitante>{}</Solicitante>
+                </ViewAgendamento>
+
+                <ViewLocalAtendimento>
+                    <ViewTitle>
+                        <TitleSolicitante>Local Atendimento</TitleSolicitante>
+                        <BtnAdd onPress={() => navigation.navigate('')}>
+                            <Icon name="add-circle-outline" size={30} color="#5EE0B6" />
+                        </BtnAdd>
+                    </ViewTitle>
+                    <Solicitante>{}</Solicitante>
+                </ViewLocalAtendimento>
+
+                <ViewTipoConsulta>
+                    <ViewTitle>
+                        <TitleSolicitante>Tipo de Consulta </TitleSolicitante>
+                        <BtnAdd onPress={() => navigation.navigate('')}>
+                            <Icon name="add-circle-outline" size={30} color="#5EE0B6" />
+                        </BtnAdd>
+                    </ViewTitle>
+                    <Solicitante>{}</Solicitante>
+                </ViewTipoConsulta>
+
+            </ViewCorpo>
+        </Container>
     );
-
 }
-
-const styles = StyleSheet.create({
-
-    MainContainer: {
-
-        justifyContent: 'center',
-        flex: 1,
-        margin: 10
-    }
-
-});

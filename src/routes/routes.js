@@ -5,6 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Login from '../pages/Login';
 import Cadastrar from '../pages/Cadastrar';
 import Qrcode from '../pages/QrCode_Guias';
+import Solicitante from '../pages/Emitir_Guia/Solicitante';
+import Prestador from '../pages/Emitir_Guia/Prestador';
 
 //Routes
 import Home from './Drawer_Menu';
@@ -20,6 +22,8 @@ export default function Routes() {
       <Stack.Screen name="Cadastrar" component={Cadastrar} />
       <Stack.Screen name="Home"  component={Home}/>
       <Stack.Screen name="Qrcode" component={Qrcode} />
+      <Stack.Screen name="Solicitante" component={Solicitante} initialParams={{solicitante: 'escolha' }}/>
+      <Stack.Screen name="Prestador" component={Prestador} initialParams={{prestador: 'escolha' }}/>
     </Stack.Navigator>
   );
 }

@@ -24,8 +24,7 @@ export default function QrcodeGuias({navigation, route}){
             <ViewTop>
                 <Title>Guia</Title>
                     <TitleGuia>
-                        ID: 1234567
-                        {/* {JSON.stringify(ID._id)} */}
+                        {JSON.stringify(ID._id)}
                     </TitleGuia>
             </ViewTop>
             <ViewBody>

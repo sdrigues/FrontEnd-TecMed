@@ -66,31 +66,33 @@ export const ViewItem = styled.View`
     margin-left: 3%;
     border-radius: 10px;
     width: 95%;
+    height: 172px;
 `;
 
 //FlatListItems Title
 
 export const ViewTitle = styled.View`
    flex-direction: row;
-   margin-top: 2%;
-   margin-left: 5%;
+   margin-top: 3%;
+   margin-left: 4%;
 `;
 export const TextTitle = styled.Text`
     color: #000;
-    font-size: 18px;
+    font-size: 19px;
+    font-weight: bold;
 `;
 export const TextNomePrest = styled.Text`
     color: rgba(0,0,0,0.8);
-    font-size: 16px;
+    font-size: 17px;
     padding-top: 1%;
-    padding-left: 10;
+    padding-left: 10px;
 `;
 
 //FlatListItems View
 export const ViewConteudo= styled.View`
     flex-direction: row;
-    margin-left: 5%;
-    margin-top: 2%;
+    margin-left: 4.5%;
+    margin-top: 3%;
 `;
 
 //FlatListItems View 1
@@ -98,17 +100,15 @@ export const ViewConteudo= styled.View`
 
 export const TextEspecialidade = styled.Text`
     font-weight: bold;
-    font-size: 13px;
+    font-size: 14px;
     padding-left: 8px;
 `;
 
 export const TextTipoEspecialidade = styled.Text`
-    font-size: 13px;
+    font-size: 14px;
     padding-left: 4px;
     padding-top: 0.5%;
 `;
-
-
 
 
 //FlatListItems View 2
@@ -116,23 +116,23 @@ export const TextTipoEspecialidade = styled.Text`
 export const TextEnd = styled.Text`
     font-weight: bold;
     padding-left: 8px;
-    font-size: 11px;
+    font-size: 12px;
 `;
 
 export const TextEndPrestador = styled.Text`
-    font-size: 10px;
+    font-size: 11px;
     padding-left: 4px;
     padding-top: 0.5%;
 `;
 
 export const TextNum = styled.Text`
     font-weight: bold;
-    font-size: 11px;
+    font-size: 12px;
     padding-left: 10px;
 `;
 
 export const TextNumPrest = styled.Text`
-    font-size: 10px;
+    font-size: 11px;
     padding-left: 4px;
     padding-top: 0.5%;
 `;
@@ -142,10 +142,10 @@ export const TextNumPrest = styled.Text`
 export const TextCep = styled.Text`
     font-weight: bold;
     padding-left: 8px;
-    font-size: 11px;
+    font-size: 12px;
 `;
 export const TextCepPrest = styled.Text`
-    font-size: 10px;
+    font-size: 11px;
     padding-left: 4px;
     padding-top: 0.5%;
 `;
@@ -153,10 +153,10 @@ export const TextCepPrest = styled.Text`
 export const TextBairro = styled.Text`
     font-weight: bold;
     padding-left: 4px;
-    font-size: 11px;
+    font-size: 12px;
 `;
 export const TextBairroPrest = styled.Text`
-    font-size: 10px;
+    font-size: 11px;
     padding-left: 4px;
     padding-top: 0.5%;
 `;
@@ -164,10 +164,10 @@ export const TextBairroPrest = styled.Text`
 export const TextCidade = styled.Text`
     font-weight: bold;
     padding-left: 4px;
-    font-size: 11px;
+    font-size: 12px;
 `;
 export const TextCidadePrest = styled.Text`
-    font-size: 10px;
+    font-size: 11px;
     padding-left: 4px;
     padding-top: 0.5%;
 `;
