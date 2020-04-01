@@ -20,7 +20,7 @@ import {
 import api from '../../../services/api';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-export default function Produto({ navigation }) {
+export default function TipoConsulta({ navigation }) {
     const [data, setData] = useState();
     const [temp, setTemp] = useState();
 
@@ -48,9 +48,8 @@ export default function Produto({ navigation }) {
     };
 
     const renderItem = ({ item }) => (
-        <ViewItem onPress={() => navigation.navigate('EmitirGuia', {
-            prestador: item.title,
-            idPrestador: item._id,
+        <ViewItem onPress={() => navigation.navigate('Guia', {
+            TipoConsulta: item.title,
         })}>
             <TextTitle>{item.title}</TextTitle>
         </ViewItem>
@@ -60,14 +59,14 @@ export default function Produto({ navigation }) {
         <Container>
 
             <TitleView>
-                <BtnHome onPress={() => navigation.navigate('EmitirGuia')}>
+                <BtnHome onPress={() => navigation.navigate('Guia')}>
                     <Icon name="keyboard-arrow-left" size={30} color="rgba(0,0,0,0.6)" />
                 </BtnHome>
-                <Descricao>Prestador</Descricao>
+                <Descricao>Especialidades</Descricao>
             </TitleView>
 
             <ViewTop>
-                <TextInput placeholder="Buscar Cliente"
+                <TextInput placeholder="Buscar Especialidades"
                     onChangeText={text => searchFilterFunction(text)}
                 />
             </ViewTop>

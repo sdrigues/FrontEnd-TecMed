@@ -6,8 +6,7 @@ import Home from '../pages/Tela Inicial';
 import SignOut from '../pages/Login';
 import Financeiro from '../pages/Financeiro';
 import RedeMedica from '../pages/Rede_Medica';
-import EmitirGuia from '../pages/Emitir_Guia';
-
+import EmissaoGuias from '../pages/Guias/Emissao_Guias';
 //custom drawer
 import DrawerContent from '../components/customDrawer';
 
@@ -24,7 +23,7 @@ export default function RootNavigator() {
       <Drawer.Screen name="Guias" component={Guias} />
       <Drawer.Screen name="Financeiro" component={Financeiro} />
       <Drawer.Screen name="RedeMedica" component={RedeMedica} />
-      <Drawer.Screen name="EmitirGuia" component={EmitirGuia} />
+      <Drawer.Screen name="EmissaoGuias" component={EmissaoGuias} />
       <Drawer.Screen name="SignOut" component={SignOut} />
     </Drawer.Navigator>
   );

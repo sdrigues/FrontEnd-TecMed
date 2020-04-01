@@ -17,9 +17,9 @@ export const BtnHome = styled.TouchableOpacity`
 
 export const Descricao = styled.Text`
     font-size: 25px;
-    color: #3498db;
+    color: #5EE0B6;
     margin-top: 10%;
-    margin-left: 25%;
+    margin-left: 7%;
 `;
 
 
@@ -54,11 +54,11 @@ export const ViewItem = styled.TouchableOpacity`
     width: 90%;
     border-radius: 10px;
     margin-left: 5%;
-    height: 60px;
+    height: 65px;
 `;
 
 export const TextTitle = styled.Text`
-    color: #3498DB;
+    color: rgba(0,0,0,0.6);
     font-size: 22px;
     padding-left: 10%;
     margin-top: 3%;

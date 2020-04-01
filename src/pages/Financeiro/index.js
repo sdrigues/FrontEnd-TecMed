@@ -3,6 +3,7 @@ import {StatusBar} from 'react-native';
 import { 
     Container,
     ViewTop,
+    BtnVoltar,
     Title,
     ViewCard,
     ViewTitle,
@@ -14,21 +15,20 @@ import {
     ValConsultas,
     TotalText,
     ValCard,
-    ViewGrafico,
-    TitleGrafico
-
 } from './styled';
 
-import { AreaChart, Grid } from 'react-native-svg-charts';
-import * as shape from 'd3-shape'
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
-export default function TelaInicial(){
-    const data = [1, 2, 3, 4, 5 ]
+export default function TelaInicial({ navigation }){
+
 
     return(
        <Container>
            <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
            <ViewTop>
+               <BtnVoltar onPress={() => navigation.goBack()}>
+                   <Icon name="keyboard-arrow-left" size={30} color="#000" />
+               </BtnVoltar>
                <Title>DashBoard</Title>
            </ViewTop>
 
@@ -48,38 +48,18 @@ export default function TelaInicial(){
 
             <ViewCard>
                 <ViewTitle>
-                    <TitleCard>Valor Coparticipação</TitleCard>
+                    <TitleCard>Guias Disponíveis:</TitleCard>
                 </ViewTitle>
                 
                 <ViewSubTitle>
-                    <SubTitleCard>Ultimos 30 Dias</SubTitleCard>
                 </ViewSubTitle>
                 
                 <ViewConteudo>
-                    <TotalText>Total: R$ </TotalText>
-                    <ValCard>123,45</ValCard>  
+                    <TotalText>Total:</TotalText>
+                    <ValCard>3</ValCard>  
                 </ViewConteudo>
             </ViewCard>
-            <ViewGrafico>
-                <TitleGrafico>Consultas</TitleGrafico>
-            <AreaChart 
-                    style={{ 
-                        height: 180, 
-                        width: 300,
-                        elevation: 4,
-                        borderTopLeftRadius: 15,
-                        borderTopRightRadius: 15,
-                        marginBottom: 3,
-                        backgroundColor: '#FFF'
-                     }}
-                    data={ data }
-                    contentInset={{ top: 20, bottom: 0, left: 1, right: 2 }}
-                    curve={ shape.curveNatural }
-                    svg={{ fill: '#5EE0B6' }}>
-
-                    <Grid/>
-                </AreaChart>
-            </ViewGrafico>
+           
        </Container>
     );
 }

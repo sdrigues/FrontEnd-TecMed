@@ -117,10 +117,10 @@ export default function App({ navigation }) {
     <Container>
       <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
       <TopView>
-        <BtnVoltar onPress={() => navigation.navigate('Home')} >
+        <BtnVoltar onPress={() => navigation.goBack()} >
           <Icon name="chevron-left" size={30} color="rgba(0,0,0,0.5)" />
         </BtnVoltar>
-        <Descricao>Guias Efetuadas</Descricao>
+        <Descricao>Guias Pendentes</Descricao>
       </TopView>
 
       <ViewTop>
